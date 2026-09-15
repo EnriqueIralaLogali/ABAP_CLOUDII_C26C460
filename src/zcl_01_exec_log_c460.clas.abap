@@ -69,11 +69,6 @@ CLASS zcl_01_exec_log_c460 IMPLEMENTATION.
 
 
 
-
-
-
-
-
   ENDMETHOD.
 
 ENDCLASS.
