@@ -7,6 +7,7 @@ CLASS zcl_09_meth_inher_2_log_c460 DEFINITION
   PUBLIC SECTION.
 
     METHODS: set_name REDEFINITION.
+            " set_meth REDEFINITION.
 
   PROTECTED SECTION.
   PRIVATE SECTION.
@@ -18,15 +19,17 @@ CLASS zcl_09_meth_inher_2_log_c460 IMPLEMENTATION.
 
   METHOD set_name.
 
+    DATA: ls_name TYPE ty_name.
+
     DATA(lv_1) = zcl_08_meth_inher_log_c460=>c1.
 
     "super->set_name( is_name = ls_name ).
 
-    TYPES: BEGIN OF ty_name,
-             name TYPE string,
-           END OF ty_name.
-
-    DATA: ls_name TYPE ty_name.
+*    TYPES: BEGIN OF ty_name,
+*             name TYPE string,
+*           END OF ty_name.
+*
+*    DATA: ls_name TYPE ty_name.
 
     super->set_name( is_name = ls_name ).
 

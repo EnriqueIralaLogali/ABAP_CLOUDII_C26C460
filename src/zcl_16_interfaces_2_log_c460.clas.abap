@@ -1,0 +1,22 @@
+CLASS zcl_16_interfaces_2_log_c460 DEFINITION INHERITING FROM zcl_15_interfaces_log_c460
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+   METHODS: my_meth.
+
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_16_interfaces_2_log_c460 IMPLEMENTATION.
+
+  METHOD my_meth.
+     me->zif_01_log_460~conn_id = '0002'.
+  ENDMETHOD.
+
+ENDCLASS.

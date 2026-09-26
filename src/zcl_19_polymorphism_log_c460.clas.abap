@@ -1,0 +1,18 @@
+CLASS zcl_19_polymorphism_log_c460 DEFINITION ABSTRACT
+  PUBLIC
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+    METHODS:
+      airplane_type ABSTRACT
+        RETURNING VALUE(rv_airplane_type) TYPE string.
+
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_19_polymorphism_log_c460 IMPLEMENTATION.
+ENDCLASS.
