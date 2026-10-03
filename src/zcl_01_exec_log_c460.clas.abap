@@ -186,24 +186,121 @@ CLASS zcl_01_exec_log_c460 IMPLEMENTATION.
 
 * References
 
-    DATA: lo_vat_ind_1 TYPE REF TO zcl_29_vat_ind_log_c460,
-          lo_vat_ind_2 TYPE REF TO zcl_29_vat_ind_log_c460,
-          lo_vat_ind_3 TYPE REF TO zcl_29_vat_ind_log_c460.
+*    DATA: lo_vat_ind_1 TYPE REF TO zcl_29_vat_ind_log_c460,
+*          lo_vat_ind_2 TYPE REF TO zcl_29_vat_ind_log_c460,
+*          lo_vat_ind_3 TYPE REF TO zcl_29_vat_ind_log_c460.
+*
+*    lo_vat_ind_1 = NEW #( ).
+**    lo_vat_ind_2 = NEW #( ).
+**    lo_vat_ind_3 = NEW #( ).
+*
+*   lo_vat_ind_2 = lo_vat_ind_1.
+*   lo_vat_ind_3 = lo_vat_ind_1.
+*
+*    lo_vat_ind_1->vat_ind = 'A1'.
+*    lo_vat_ind_2->vat_ind = 'A2'.
+*    lo_vat_ind_3->vat_ind = 'A3'.
+*
+*    out->write( lo_vat_ind_1->vat_ind ).
+*    out->write( lo_vat_ind_2->vat_ind ).
+*    out->write( lo_vat_ind_3->vat_ind ).
 
-    lo_vat_ind_1 = NEW #( ).
-*    lo_vat_ind_2 = NEW #( ).
-*    lo_vat_ind_3 = NEW #( ).
+* Generic class Object
 
-   lo_vat_ind_2 = lo_vat_ind_1.
-   lo_vat_ind_3 = lo_vat_ind_1.
+*    DATA: lo_object TYPE REF TO object.
+*
+*    lo_object = NEW zcl_30_product_log_c460( ).
+*
+*    DATA(lv_method_name) = 'RETURN_CATEGORY'.
+*
+*    DATA lv_category TYPE string.
+*
+*    CALL METHOD lo_object->(lv_method_name) RECEIVING rv_category = lv_category.
+*
+*    out->write( lv_category ).
 
-    lo_vat_ind_1->vat_ind = 'A1'.
-    lo_vat_ind_2->vat_ind = 'A2'.
-    lo_vat_ind_3->vat_ind = 'A3'.
+* Events
+*    DATA(lo_timer) = NEW zcl_31_timer_log_c460( ).
+*    DATA(lo_conexion) = NEW zcl_32_conexion_log_c460( ).
+*
+*    " Handle reference
+*    SET HANDLER lo_conexion->on_time_out FOR lo_timer.
+*
+*    DO.
+*
+*      WAIT UP TO 1 SECONDS.
+*      lo_timer->increment_counter( 1 ).
+*
+*      IF lo_conexion->hour IS INITIAL.
+*        out->write( |Event not yet executed: { cl_abap_context_info=>get_system_time( ) }| ).
+*      ELSE.
+*        out->write( |Event was raised at: { lo_conexion->hour }-{ lo_conexion->sender_user }| ).
+*        EXIT.
+*      ENDIF.
+*
+*    ENDDO.
 
-    out->write( lo_vat_ind_1->vat_ind ).
-    out->write( lo_vat_ind_2->vat_ind ).
-    out->write( lo_vat_ind_3->vat_ind ).
+* Events wit interfaces
+*    DATA(lo_central_bank) = NEW zcl_33_bank_log_c460( ).
+*    DATA(lo_client_bank) = NEW zcl_34_client_acc_log_c460( ).
+*
+*    SET HANDLER lo_client_bank->on_new_transfer FOR lo_central_bank ACTIVATION abap_true.
+*
+*    DO 5 TIMES.
+*      WAIT UP TO 1 SECONDS.
+*      out->write( lo_central_bank->create_notification( ) ).
+*      out->write( lo_client_bank->notification ).
+*      IF sy-index = 3.
+*        SET HANDLER lo_client_bank->on_new_transfer FOR lo_central_bank ACTIVATION abap_false.
+*        lo_client_bank->notification = 'No handler for event new transfer'.
+*      ENDIF.
+*    ENDDO.
+
+* Exemptions
+    DATA(lo_exemp) = NEW zcl_35_manage_auth_log_c460( ).
+
+    DATA: lx_excep TYPE REF TO zcx_01_auth_log_c460.
+
+    DATA: lv_result TYPE i,
+          lv_num1   TYPE i VALUE 10,
+          lv_num2   TYPE i.
+
+    TRY.
+
+        lv_result = lv_num1 / lv_num2.
+
+        lo_exemp->check_user( sy-uname ).
+
+*      CATCH cx_root INTO DATA(lx_ex).
+*        out->write( lx_ex->get_text( ) ).
+
+
+      CATCH zcx_01_auth_log_c460 INTO lx_excep.
+        "CATCH cx_root INTO DATA(lx_ex).
+        "out->write( lx_ex->get_text( ) ).
+        "out->write( 'Exception Handled' ).
+        out->write( lx_excep->get_text( ) ).
+
+      CATCH cx_sy_zerodivide INTO DATA(lx_zero).
+        out->write( lx_zero->get_text( ) ).
+
+        lv_num2 = 2.
+
+        RETRY.
+
+    ENDTRY.
+
+    out->write( lv_result ).
+
+
+
+
+
+
+
+
+
+
 
 
 
