@@ -1,0 +1,21 @@
+CLASS zcl_40_square_log_c460 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+    INTERFACES zif_06_log_c460 .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_40_square_log_c460 IMPLEMENTATION.
+
+
+  METHOD zif_06_log_c460~draw_shape.
+    rv_shape = 'Square'.
+  ENDMETHOD.
+ENDCLASS.
