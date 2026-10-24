@@ -5,6 +5,8 @@ CLASS zcl_07_inhe_const_2_log_c460 DEFINITION INHERITING FROM zcl_06_inhe_const_
 
   PUBLIC SECTION.
 
+    "data: box type string."
+
     METHODS:
      constructor
        IMPORTING
@@ -24,6 +26,8 @@ CLASS zcl_07_inhe_const_2_log_c460 IMPLEMENTATION.
     super->constructor( iv_view_type = iv_view_type ).
 
     me->box = iv_box.
+
+    me->meth1( ).
 
   ENDMETHOD.
 

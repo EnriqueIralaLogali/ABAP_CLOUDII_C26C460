@@ -257,40 +257,51 @@ CLASS zcl_01_exec_log_c460 IMPLEMENTATION.
 *    ENDDO.
 
 * Exemptions
-    DATA(lo_exemp) = NEW zcl_35_manage_auth_log_c460( ).
+*    DATA(lo_exemp) = NEW zcl_35_manage_auth_log_c460( ).
+*
+*    DATA: lx_excep TYPE REF TO zcx_01_auth_log_c460.
+*
+*    DATA: lv_result TYPE i,
+*          lv_num1   TYPE i VALUE 10,
+*          lv_num2   TYPE i.
+*
+*    TRY.
+*
+*        lv_result = lv_num1 / lv_num2.
+*
+*        lo_exemp->check_user( sy-uname ).
+*
+**      CATCH cx_root INTO DATA(lx_ex).
+**        out->write( lx_ex->get_text( ) ).
+*
+*
+*      CATCH zcx_01_auth_log_c460 INTO lx_excep.
+*        "CATCH cx_root INTO DATA(lx_ex).
+*        "out->write( lx_ex->get_text( ) ).
+*        "out->write( 'Exception Handled' ).
+*        out->write( lx_excep->get_text( ) ).
+*
+*      CATCH cx_sy_zerodivide INTO DATA(lx_zero).
+*        out->write( lx_zero->get_text( ) ).
+*
+*        lv_num2 = 2.
+*
+*        RETRY.
+*
+*    ENDTRY.
+*
+*    out->write( lv_result ).
 
-    DATA: lx_excep TYPE REF TO zcx_01_auth_log_c460.
+* Factorial
+    DATA(lo_fact) = NEW zcl_49_businnes_proc_log_c460( ).
 
-    DATA: lv_result TYPE i,
-          lv_num1   TYPE i VALUE 10,
-          lv_num2   TYPE i.
+    lo_fact->get_factorial(
+      EXPORTING
+        iv_number    = 4
+      IMPORTING
+        ev_factorial = DATA(lv_factorial) ).
 
-    TRY.
-
-        lv_result = lv_num1 / lv_num2.
-
-        lo_exemp->check_user( sy-uname ).
-
-*      CATCH cx_root INTO DATA(lx_ex).
-*        out->write( lx_ex->get_text( ) ).
-
-
-      CATCH zcx_01_auth_log_c460 INTO lx_excep.
-        "CATCH cx_root INTO DATA(lx_ex).
-        "out->write( lx_ex->get_text( ) ).
-        "out->write( 'Exception Handled' ).
-        out->write( lx_excep->get_text( ) ).
-
-      CATCH cx_sy_zerodivide INTO DATA(lx_zero).
-        out->write( lx_zero->get_text( ) ).
-
-        lv_num2 = 2.
-
-        RETRY.
-
-    ENDTRY.
-
-    out->write( lv_result ).
+    out->write( lv_factorial ).
 
 
 
