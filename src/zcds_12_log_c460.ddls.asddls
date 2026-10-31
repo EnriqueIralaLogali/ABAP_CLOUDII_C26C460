@@ -1,6 +1,6 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
-@EndUserText.label: 'Assciation with parameters'
+@EndUserText.label: 'Association with parameters'
 @Metadata.ignorePropagatedAnnotations: true
 define view entity zcds_12_log_c460
 
@@ -15,4 +15,5 @@ define view entity zcds_12_log_c460
   key Travel.travel_id                                       as TravelId,
       Travel.agency_id                                       as AgencyId,
       _Agency( pCountryCode: $parameters.pCountryCode )[City = 'Atlanta'].Name as AgencyName
+      
 }
