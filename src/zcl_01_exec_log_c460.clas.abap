@@ -293,17 +293,27 @@ CLASS zcl_01_exec_log_c460 IMPLEMENTATION.
 *    out->write( lv_result ).
 
 * Factorial
-    DATA(lo_fact) = NEW zcl_49_businnes_proc_log_c460( ).
+*    DATA(lo_fact) = NEW zcl_49_businnes_proc_log_c460( ).
+*
+*    lo_fact->get_factorial(
+*      EXPORTING
+*        iv_number    = 4
+*      IMPORTING
+*        ev_factorial = DATA(lv_factorial) ).
+*
+*    out->write( lv_factorial ).
 
-    lo_fact->get_factorial(
-      EXPORTING
-        iv_number    = 4
-      IMPORTING
-        ev_factorial = DATA(lv_factorial) ).
-
-    out->write( lv_factorial ).
-
-
+modify zemployee_lgl from table @( value #( ( employee = '1' manager = '' name = 'Name 1' )
+                                              ( employee = '2' manager = '1' name = 'Name 2' )
+                                              ( employee = '3' manager = '2' name = 'Name 3' )
+                                              ( employee = '4' manager = '2' name = 'Name 4' )
+                                              ( employee = '5' manager = '' name = 'Name 5' )
+                                              ( employee = '6' manager = '5' name = 'Name 6' )
+                                              ( employee = '7' manager = '5' name = 'Name 7' )
+                                              ( employee = '8' manager = '7' name = 'Name 8' )
+                                              ( employee = '9' manager = '8' name = 'Name 9' )
+                                              ( employee = '10' manager = '8' name = 'Name 10' )
+                                              ) ).
 
 
 
