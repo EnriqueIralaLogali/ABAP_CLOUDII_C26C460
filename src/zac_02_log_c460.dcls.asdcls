@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access control - Multiple Grant'
+@MappingRole: true
+define role ZAC_02_LOG_C460 {
+    grant
+        select
+            on
+                zcds_29_log_c460
+                    where
+                        CountryCode = 'ES';
+                        
+}
