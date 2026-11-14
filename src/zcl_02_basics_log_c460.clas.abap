@@ -81,7 +81,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_02_basics_log_c460 IMPLEMENTATION.
+CLASS ZCL_02_BASICS_LOG_C460 IMPLEMENTATION.
 
 
   METHOD get_attr.
@@ -122,6 +122,7 @@ CLASS zcl_02_basics_log_c460 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD get_flight.
 
     SELECT SINGLE carrier_id,
@@ -133,6 +134,7 @@ CLASS zcl_02_basics_log_c460 IMPLEMENTATION.
              INTO @rs_flight.
 
   ENDMETHOD.
+
 
   METHOD get_flights.
 
@@ -184,6 +186,7 @@ CLASS zcl_02_basics_log_c460 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD my_attr.
 
     me->private_attr = private_attr.
@@ -199,5 +202,4 @@ CLASS zcl_02_basics_log_c460 IMPLEMENTATION.
     ).
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -14,13 +14,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_18_abstract_child_log_c460 IMPLEMENTATION.
+CLASS ZCL_18_ABSTRACT_CHILD_LOG_C460 IMPLEMENTATION.
+
+
   METHOD input_products.
    rv_input = 'input products'.
   ENDMETHOD.
 
+
   METHOD production_line.
     rv_production = 'Production line'.
   ENDMETHOD.
-
 ENDCLASS.

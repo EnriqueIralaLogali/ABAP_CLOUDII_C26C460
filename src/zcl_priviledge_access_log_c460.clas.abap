@@ -11,7 +11,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_priviledge_access_log_c460 IMPLEMENTATION.
+CLASS ZCL_PRIVILEDGE_ACCESS_LOG_C460 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
     SELECT FROM zcds_34_log_c460 WITH PRIVILEGED ACCESS
@@ -23,5 +24,4 @@ CLASS zcl_priviledge_access_log_c460 IMPLEMENTATION.
       out->write( lt_results ).
     ENDIF.
   ENDMETHOD.
-
 ENDCLASS.

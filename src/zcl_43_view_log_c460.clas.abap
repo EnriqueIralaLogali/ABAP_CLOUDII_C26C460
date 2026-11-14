@@ -16,10 +16,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_43_view_log_c460 IMPLEMENTATION.
+CLASS ZCL_43_VIEW_LOG_C460 IMPLEMENTATION.
+
 
   METHOD display_employee.
     io_out->write( |{ iv_name }---{ iv_role }| ).
   ENDMETHOD.
-
 ENDCLASS.

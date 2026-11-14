@@ -13,10 +13,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_16_interfaces_2_log_c460 IMPLEMENTATION.
+CLASS ZCL_16_INTERFACES_2_LOG_C460 IMPLEMENTATION.
+
 
   METHOD my_meth.
      me->zif_01_log_460~conn_id = '0002'.
   ENDMETHOD.
-
 ENDCLASS.

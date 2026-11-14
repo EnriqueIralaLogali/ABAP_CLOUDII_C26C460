@@ -23,7 +23,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_42_model_log_c460 IMPLEMENTATION.
+CLASS ZCL_42_MODEL_LOG_C460 IMPLEMENTATION.
+
 
   METHOD constructor.
     me->name = iv_name.
@@ -49,5 +50,4 @@ CLASS zcl_42_model_log_c460 IMPLEMENTATION.
   METHOD set_role.
     me->role = iv_role.
   ENDMETHOD.
-
 ENDCLASS.

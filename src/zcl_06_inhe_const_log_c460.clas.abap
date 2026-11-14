@@ -21,14 +21,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_06_inhe_const_log_c460 IMPLEMENTATION.
+CLASS ZCL_06_INHE_CONST_LOG_C460 IMPLEMENTATION.
+
 
   METHOD constructor.
     me->view_type = iv_view_type.
   ENDMETHOD.
 
+
   METHOD meth1.
 
   ENDMETHOD.
-
 ENDCLASS.

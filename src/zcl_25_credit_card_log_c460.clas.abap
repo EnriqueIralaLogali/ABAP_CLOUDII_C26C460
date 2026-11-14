@@ -17,13 +17,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_25_credit_card_log_c460 IMPLEMENTATION.
+CLASS ZCL_25_CREDIT_CARD_LOG_C460 IMPLEMENTATION.
+
+
   METHOD get_card_num.
     rv_card_num = me->card_num.
   ENDMETHOD.
 
+
   METHOD set_card_num.
     me->card_num = iv_card_num.
   ENDMETHOD.
-
 ENDCLASS.

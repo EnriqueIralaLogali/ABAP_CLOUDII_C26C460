@@ -15,7 +15,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_09_meth_inher_2_log_c460 IMPLEMENTATION.
+CLASS ZCL_09_METH_INHER_2_LOG_C460 IMPLEMENTATION.
+
 
   METHOD set_name.
 
@@ -46,5 +47,4 @@ CLASS zcl_09_meth_inher_2_log_c460 IMPLEMENTATION.
     me->set_name( is_name = ls_name ).
 
   ENDMETHOD.
-
 ENDCLASS.

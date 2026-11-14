@@ -22,7 +22,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_31_timer_log_c460 IMPLEMENTATION.
+CLASS ZCL_31_TIMER_LOG_C460 IMPLEMENTATION.
+
 
   METHOD check_limit.
     IF me->counter GE 5.
@@ -30,13 +31,14 @@ CLASS zcl_31_timer_log_c460 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD increment_counter.
     me->counter += iv_conter.  " me->counter = me->counter + iv_counter.
     me->check_limit( ).
   ENDMETHOD.
 
+
   METHOD constructor.
     me->user = sy-uname.
   ENDMETHOD.
-
 ENDCLASS.

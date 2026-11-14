@@ -23,10 +23,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_04_inheritance_1_log_c460 IMPLEMENTATION.
+CLASS ZCL_04_INHERITANCE_1_LOG_C460 IMPLEMENTATION.
+
 
   METHOD get_architecture.
     rv_architecture = me->architecture.
   ENDMETHOD.
-
 ENDCLASS.

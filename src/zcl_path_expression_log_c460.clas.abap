@@ -11,7 +11,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_path_expression_log_c460 IMPLEMENTATION.
+CLASS ZCL_PATH_EXPRESSION_LOG_C460 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -32,5 +33,4 @@ CLASS zcl_path_expression_log_c460 IMPLEMENTATION.
     ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.

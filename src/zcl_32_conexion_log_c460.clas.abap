@@ -18,11 +18,11 @@ ENDCLASS.
 
 
 
-CLASS zcl_32_conexion_log_c460 IMPLEMENTATION.
+CLASS ZCL_32_CONEXION_LOG_C460 IMPLEMENTATION.
+
 
   METHOD on_time_out.
     me->hour = ev_hour.
     me->sender_user = sender->user.
   ENDMETHOD.
-
 ENDCLASS.

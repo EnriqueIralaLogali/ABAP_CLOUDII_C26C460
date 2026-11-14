@@ -29,7 +29,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_50_test_class_log_c460 IMPLEMENTATION.
+CLASS ZCL_50_TEST_CLASS_LOG_C460 IMPLEMENTATION.
+
 
   METHOD factorial_test.
 
@@ -52,12 +53,13 @@ CLASS zcl_50_test_class_log_c460 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD setup.
     mo_cut = NEW #( ).
   ENDMETHOD.
 
+
   METHOD teardown.
     CLEAR: mo_cut.
   ENDMETHOD.
-
 ENDCLASS.

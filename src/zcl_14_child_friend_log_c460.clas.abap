@@ -13,7 +13,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_14_child_friend_log_c460 IMPLEMENTATION.
+CLASS ZCL_14_CHILD_FRIEND_LOG_C460 IMPLEMENTATION.
+
 
   METHOD my_meth.
      me->father_attr = 'Child hello'.
@@ -23,5 +24,4 @@ CLASS zcl_14_child_friend_log_c460 IMPLEMENTATION.
      lo_inst->private_attr = 'child'.
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -25,14 +25,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_08_meth_inher_log_c460 IMPLEMENTATION.
+CLASS ZCL_08_METH_INHER_LOG_C460 IMPLEMENTATION.
+
 
   METHOD set_name.
     APPEND is_name TO gt_name.
   ENDMETHOD.
 
+
   METHOD set_meth.
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -17,12 +17,12 @@ ENDCLASS.
 
 
 
-CLASS zcl_36_local_class_log_c460 IMPLEMENTATION.
+CLASS ZCL_36_LOCAL_CLASS_LOG_C460 IMPLEMENTATION.
+
 
   METHOD my_meth.
 
     data(lo_local) = new lcl_helper( ).
 
   ENDMETHOD.
-
 ENDCLASS.

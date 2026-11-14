@@ -11,9 +11,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_21_pass_plane_log_c460 IMPLEMENTATION.
+CLASS ZCL_21_PASS_PLANE_LOG_C460 IMPLEMENTATION.
+
+
   METHOD airplane_type.
      rv_airplane_type = 'Passenger Plane'.
   ENDMETHOD.
-
 ENDCLASS.

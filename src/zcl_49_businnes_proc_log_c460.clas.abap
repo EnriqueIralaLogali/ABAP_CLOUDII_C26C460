@@ -15,7 +15,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_49_businnes_proc_log_c460 IMPLEMENTATION.
+CLASS ZCL_49_BUSINNES_PROC_LOG_C460 IMPLEMENTATION.
+
 
   METHOD get_factorial.
 
@@ -32,5 +33,4 @@ CLASS zcl_49_businnes_proc_log_c460 IMPLEMENTATION.
     ENDWHILE.
 
   ENDMETHOD.
-
 ENDCLASS.

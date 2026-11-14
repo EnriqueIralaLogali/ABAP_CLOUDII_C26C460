@@ -22,7 +22,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_44_controller_log_c460 IMPLEMENTATION.
+CLASS ZCL_44_CONTROLLER_LOG_C460 IMPLEMENTATION.
+
 
   METHOD get_model.
     ro_model = me->model.
@@ -42,5 +43,4 @@ CLASS zcl_44_controller_log_c460 IMPLEMENTATION.
   METHOD set_view.
     me->view = io_view.
   ENDMETHOD.
-
 ENDCLASS.

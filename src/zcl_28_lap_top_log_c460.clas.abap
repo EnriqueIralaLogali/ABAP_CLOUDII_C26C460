@@ -14,10 +14,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_28_lap_top_log_c460 IMPLEMENTATION.
+CLASS ZCL_28_LAP_TOP_LOG_C460 IMPLEMENTATION.
+
 
   METHOD constructor.
     me->keyboard = io_keyboard.
   ENDMETHOD.
-
 ENDCLASS.

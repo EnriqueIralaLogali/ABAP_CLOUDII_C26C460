@@ -17,15 +17,18 @@ ENDCLASS.
 
 
 
-CLASS zcl_15_interfaces_log_c460 IMPLEMENTATION.
+CLASS ZCL_15_INTERFACES_LOG_C460 IMPLEMENTATION.
+
+
+  METHOD set_conn_id.
+    me->zif_01_log_c460~conn_id = iv_conn_id.
+  ENDMETHOD.
+
 
   METHOD get_conn_id.
     rv_conn_id = me->zif_01_log_c460~conn_id.
   ENDMETHOD.
 
-  METHOD set_conn_id.
-    me->zif_01_log_c460~conn_id = iv_conn_id.
-  ENDMETHOD.
 
   METHOD get_customer.
 
@@ -37,8 +40,8 @@ CLASS zcl_15_interfaces_log_c460 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD zif_03_log_c460~get_airports.
 
   ENDMETHOD.
-
 ENDCLASS.

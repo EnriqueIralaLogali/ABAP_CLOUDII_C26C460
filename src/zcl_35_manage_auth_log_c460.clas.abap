@@ -14,7 +14,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_35_manage_auth_log_c460 IMPLEMENTATION.
+CLASS ZCL_35_MANAGE_AUTH_LOG_C460 IMPLEMENTATION.
+
 
   METHOD check_user.
     IF sy-uname = 'CB9980001150'.
@@ -29,5 +30,4 @@ CLASS zcl_35_manage_auth_log_c460 IMPLEMENTATION.
         .
     ENDIF.
   ENDMETHOD.
-
 ENDCLASS.

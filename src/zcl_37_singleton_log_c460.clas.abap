@@ -22,7 +22,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_37_singleton_log_c460 IMPLEMENTATION.
+CLASS ZCL_37_SINGLETON_LOG_C460 IMPLEMENTATION.
+
 
   METHOD get_instance.
 
@@ -34,10 +35,10 @@ CLASS zcl_37_singleton_log_c460 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD constructor.
 
     me->time = cl_abap_context_info=>get_system_time( ).
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -13,10 +13,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_47_sales_dep_log_c460 IMPLEMENTATION.
+CLASS ZCL_47_SALES_DEP_LOG_C460 IMPLEMENTATION.
+
 
   METHOD on_modified_state.
     me->state = | Sales-{ ev_new_state }|.
   ENDMETHOD.
-
 ENDCLASS.

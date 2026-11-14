@@ -13,9 +13,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_48_billing_dep_log_c460 IMPLEMENTATION.
+CLASS ZCL_48_BILLING_DEP_LOG_C460 IMPLEMENTATION.
+
+
   METHOD on_modified_state.
     me->state = | Billing-{ ev_new_state }|.
   ENDMETHOD.
-
 ENDCLASS.

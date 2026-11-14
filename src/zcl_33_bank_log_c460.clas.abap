@@ -15,11 +15,11 @@ ENDCLASS.
 
 
 
-CLASS zcl_33_bank_log_c460 IMPLEMENTATION.
+CLASS ZCL_33_BANK_LOG_C460 IMPLEMENTATION.
+
 
   METHOD create_notification.
      rv_text = |Event raise ... new transfer-{ cl_abap_context_info=>get_system_time( ) }|.
      RAISE EVENT zif_05_log_c460~new_transfer.
   ENDMETHOD.
-
 ENDCLASS.

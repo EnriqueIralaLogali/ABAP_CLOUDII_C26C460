@@ -47,7 +47,8 @@ ENDCLASS.
 
 
 
-CLASS zcx_01_auth_log_c460 IMPLEMENTATION.
+CLASS ZCX_01_AUTH_LOG_C460 IMPLEMENTATION.
+
 
   METHOD constructor ##ADT_SUPPRESS_GENERATION.
     super->constructor(

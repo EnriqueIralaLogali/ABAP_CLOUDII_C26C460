@@ -17,10 +17,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_34_client_acc_log_c460 IMPLEMENTATION.
+CLASS ZCL_34_CLIENT_ACC_LOG_C460 IMPLEMENTATION.
+
 
   METHOD on_new_transfer.
     me->notification = |{ sender->office }-{ cl_abap_context_info=>get_system_time( ) }|.
   ENDMETHOD.
-
 ENDCLASS.

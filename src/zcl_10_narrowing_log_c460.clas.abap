@@ -13,9 +13,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_10_narrowing_log_c460 IMPLEMENTATION.
+CLASS ZCL_10_NARROWING_LOG_C460 IMPLEMENTATION.
+
+
   METHOD walk.
      rv_walk = 'The animal walk'.
   ENDMETHOD.
-
 ENDCLASS.

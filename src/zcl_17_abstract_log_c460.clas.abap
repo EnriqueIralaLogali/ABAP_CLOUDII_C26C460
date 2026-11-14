@@ -21,10 +21,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_17_abstract_log_c460 IMPLEMENTATION.
+CLASS ZCL_17_ABSTRACT_LOG_C460 IMPLEMENTATION.
+
 
   METHOD merchandise_output.
      rv_merchandise = 'Mechandise output'.
   ENDMETHOD.
-
 ENDCLASS.

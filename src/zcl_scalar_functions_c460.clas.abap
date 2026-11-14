@@ -15,7 +15,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_scalar_functions_c460 IMPLEMENTATION.
+CLASS ZCL_SCALAR_FUNCTIONS_C460 IMPLEMENTATION.
+
 
   METHOD vat_by_airline BY DATABASE FUNCTION FOR HDB
                         LANGUAGE SQLSCRIPT
@@ -26,5 +27,4 @@ CLASS zcl_scalar_functions_c460 IMPLEMENTATION.
       result = 24.00;
     end if;
   endmethod.
-
 ENDCLASS.

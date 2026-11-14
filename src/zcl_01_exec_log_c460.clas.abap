@@ -13,7 +13,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_01_exec_log_c460 IMPLEMENTATION.
+CLASS ZCL_01_EXEC_LOG_C460 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -368,5 +369,4 @@ modify zemployee_lgl from table @( value #( ( employee = '1' manager = '' name =
 
 
   ENDMETHOD.
-
 ENDCLASS.

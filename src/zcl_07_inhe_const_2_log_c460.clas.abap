@@ -19,7 +19,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_07_inhe_const_2_log_c460 IMPLEMENTATION.
+CLASS ZCL_07_INHE_CONST_2_LOG_C460 IMPLEMENTATION.
+
 
   METHOD constructor.
 
@@ -30,5 +31,4 @@ CLASS zcl_07_inhe_const_2_log_c460 IMPLEMENTATION.
     me->meth1( ).
 
   ENDMETHOD.
-
 ENDCLASS.

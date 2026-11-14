@@ -11,9 +11,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_23_polymor_int_2_log_c460 IMPLEMENTATION.
+CLASS ZCL_23_POLYMOR_INT_2_LOG_C460 IMPLEMENTATION.
+
+
   METHOD zif_04_log_c460~define_company.
     rv_company = 'Company USA....'.
   ENDMETHOD.
-
 ENDCLASS.

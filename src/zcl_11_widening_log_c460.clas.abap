@@ -16,13 +16,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_11_widening_log_c460 IMPLEMENTATION.
+CLASS ZCL_11_WIDENING_LOG_C460 IMPLEMENTATION.
+
+
   METHOD walk.
      rv_walk = 'The lion walk'.
   ENDMETHOD.
 
+
   METHOD my_meth.
     rv_value = 'test'.
   ENDMETHOD.
-
 ENDCLASS.

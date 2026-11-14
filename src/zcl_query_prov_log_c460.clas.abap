@@ -11,7 +11,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_query_prov_log_c460 IMPLEMENTATION.
+CLASS ZCL_QUERY_PROV_LOG_C460 IMPLEMENTATION.
+
 
   METHOD if_rap_query_provider~select.
 
@@ -45,5 +46,4 @@ CLASS zcl_query_prov_log_c460 IMPLEMENTATION.
     ENDTRY.
 
   ENDMETHOD.
-
 ENDCLASS.

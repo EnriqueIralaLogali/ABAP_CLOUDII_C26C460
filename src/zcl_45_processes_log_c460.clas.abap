@@ -19,14 +19,16 @@ ENDCLASS.
 
 
 
-CLASS zcl_45_processes_log_c460 IMPLEMENTATION.
+CLASS ZCL_45_PROCESSES_LOG_C460 IMPLEMENTATION.
+
+
   METHOD get_state.
     rv_state = me->current_state.
   ENDMETHOD.
+
 
   METHOD set_state.
     me->current_state = iv_state.
     RAISE EVENT modified_state EXPORTING ev_new_state = me->current_state.
   ENDMETHOD.
-
 ENDCLASS.

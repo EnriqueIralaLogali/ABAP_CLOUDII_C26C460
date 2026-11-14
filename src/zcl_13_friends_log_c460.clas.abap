@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_13_friends_log_c460 IMPLEMENTATION.
+CLASS ZCL_13_FRIENDS_LOG_C460 IMPLEMENTATION.
+
 
   METHOD get_friend_data.
     DATA(lo_friend) = NEW zcl_12_friends_log_c460( ).
@@ -21,5 +22,4 @@ CLASS zcl_13_friends_log_c460 IMPLEMENTATION.
     lo_friend->protected_attr = 'protected'.
 
   ENDMETHOD.
-
 ENDCLASS.

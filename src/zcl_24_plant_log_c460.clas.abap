@@ -13,10 +13,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_24_plant_log_c460 IMPLEMENTATION.
+CLASS ZCL_24_PLANT_LOG_C460 IMPLEMENTATION.
+
 
   METHOD assign_company.
      rv_plant = |Plant was assigned to ... { io_company->define_company( ) }|.
   ENDMETHOD.
-
 ENDCLASS.

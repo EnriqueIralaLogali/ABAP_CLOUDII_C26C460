@@ -12,10 +12,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_05_inheritance_2_log_c460 IMPLEMENTATION.
+CLASS ZCL_05_INHERITANCE_2_LOG_C460 IMPLEMENTATION.
+
 
   METHOD my_meth.
      me->attr1 = 'hijo'.
   ENDMETHOD.
-
 ENDCLASS.

@@ -15,9 +15,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_30_product_log_c460 IMPLEMENTATION.
+CLASS ZCL_30_PRODUCT_LOG_C460 IMPLEMENTATION.
+
+
   METHOD return_category.
     rv_category = me->category.
   ENDMETHOD.
-
 ENDCLASS.

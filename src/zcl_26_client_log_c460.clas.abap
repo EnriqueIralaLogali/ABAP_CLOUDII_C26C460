@@ -18,13 +18,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_26_client_log_c460 IMPLEMENTATION.
+CLASS ZCL_26_CLIENT_LOG_C460 IMPLEMENTATION.
+
+
   METHOD get_credit_card.
     ro_credit_card = me->credit_card.
   ENDMETHOD.
 
+
   METHOD set_credit_card.
     me->credit_card = io_credit_card.
   ENDMETHOD.
-
 ENDCLASS.

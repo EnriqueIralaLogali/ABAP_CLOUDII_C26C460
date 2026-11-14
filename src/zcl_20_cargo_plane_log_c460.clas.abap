@@ -12,9 +12,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_20_cargo_plane_log_c460 IMPLEMENTATION.
+CLASS ZCL_20_CARGO_PLANE_LOG_C460 IMPLEMENTATION.
+
+
   METHOD airplane_type.
     rv_airplane_type = 'Cargo plane'.
   ENDMETHOD.
-
 ENDCLASS.

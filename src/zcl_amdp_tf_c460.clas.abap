@@ -15,7 +15,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_amdp_tf_c460 IMPLEMENTATION.
+CLASS ZCL_AMDP_TF_C460 IMPLEMENTATION.
+
 
   METHOD get_cust_bookings BY DATABASE FUNCTION FOR HDB
                            LANGUAGE SQLSCRIPT
@@ -39,5 +40,4 @@ CLASS zcl_amdp_tf_c460 IMPLEMENTATION.
             where c.country_code = :pCountryCode
          order by b.booking_date desc;
   ENDMETHOD.
-
 ENDCLASS.
